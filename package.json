@@ -1,0 +1,21 @@
+{
+  "name": "13-simple-blog",
+  "version": "1.0.0",
+  "description": "Simple blog with Eleventy, Liquid & DecapCMS",
+  "main": "eleventy.config.js",
+  "scripts": {
+    "serve": "npx @11ty/eleventy --serve",
+    "start": "npx decap-server & npx @11ty/eleventy --serve",
+    "build": "eleventy",
+    "build-gp": "eleventy --pathprefix '13-simple-blog'"
+  },
+  "keywords": [
+    "eleventy",
+    "liquid"
+],
+  "author": "Michel Maillard",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
