@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "npx @11ty/eleventy --serve",
     "start": "npx decap-server & npx @11ty/eleventy --serve",
-    "build": "eleventy",
+    "build": "@11ty/eleventy",
     "build-gp": "eleventy --pathprefix '13-simple-blog'"
   },
   "keywords": [

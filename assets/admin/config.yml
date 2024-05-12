@@ -1,7 +1,7 @@
 backend: # Required
   name: git-gateway
   branch: main
-media_folder: "src/assets/img/" # Required
+media_folder: "assets/img/" # Required
 public_folder: "assets/img/" # Required
 local_backend: true # Run "npx decap-server" for local backend | optional
 collections: # Required
@@ -24,14 +24,31 @@ collections: # Required
           - { label: "Layout", name: "layout", widget: "string" }
           - { label: "Collections", name: "tags", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Site Settings"
+  - name: "configuration" # Required. Used in routes, e.g., /admin/collections/blog
+    label: "Configuration" # Required. Used in the UI
+    files:
+      - label: "Site settings"
         name: "settings"
         file: "_data/site.json"
         fields:
           - { label: Name, name: name, widget: string }
           - { label: Description, name: description, widget: string }
-          - { label: URL, name: url, widget: string }
           - { label: Author name, name: authorName, widget: string }
           - { label: Author URL, name: authorUrl, widget: string }
           - { label: Favicon, name: favicon, widget: string }
-          - { label: CDN, name: cdn, widget: string }
+      - label: "Tokens"
+        name: "Tokens"
+        file: "_data/tokens.json"
+        fields:
+          - { label: Primary color, name: primary-color, widget: string }
+          - { label: Secondary color, name: secondary-color, widget: string }
+          - { label: Grey 100, name: grey100, widget: string }
+          - { label: Grey 200, name: grey200, widget: string }
+          - { label: Grey 300, name: grey300, widget: string }
+          - { label: Grey 400, name: grey400, widget: string }
+          - { label: Grey 500, name: grey500, widget: string }
+          - { label: Grey 600, name: grey600, widget: string }
+          - { label: Grey 700, name: grey700, widget: string }
+          - { label: Grey 800, name: grey800, widget: string }
+          - { label: Grey 900, name: grey900, widget: string }
+          - { label: Text font size, name: text-font-size, widget: string }

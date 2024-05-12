@@ -1,0 +1,18 @@
+/* navigation.css */
+header nav ul,
+footer nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 1em 0;
+}
+
+nav a {
+    padding: .5em 1em;
+}
+
+[aria-current="page"] {
+    font-weight: bold;
+}
