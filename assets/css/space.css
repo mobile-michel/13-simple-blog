@@ -1,0 +1,19 @@
+/* space.css */
+nav ul li {
+    padding: 0 1rem;
+}
+
+aside nav ul {
+    padding-left: 0;
+}
+
+header>*,
+main>*,
+footer>* {
+    margin: 1em;
+    padding: 0 1em;
+}
+
+footer {
+    padding-bottom: 1em;
+}

@@ -1,23 +1,31 @@
-body {
-    background-color: hsl(180, 100%, 90%);
+/* colors.css */
+header {
+    background-color: var(--primary-color);
+    color: var(--grey100);
 }
 
-body>header, body>footer {
-    background-color: hsl(0, 100%, 95%);
+main,
+footer {
+    background-color: var(--grey200)
 }
 
-main {
-    background-color: hsl(90, 100%, 95%);
+nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--grey100);
 }
 
-aside {
-    background-color: hsl(280, 100%, 95%);
+footer {
+    border-top: 1px solid var(--secondary-color)
 }
 
-section {
-    border: 1px solid hsl(0, 100%, 0%);
-}
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--grey900);
+        color: var(--grey100);
+    }
 
-nav {
-    border: 1px dashed hsl(250, 100%, 50%);
+    main,
+    footer {
+        background-color: var(--grey700)
+    }
 }
