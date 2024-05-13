@@ -3,16 +3,19 @@ permalink: "assets/css/theme.css"
 ---
 
 :root {
-  --primary-color: {{ tokens.primary-color }};
-  --secondary-color: {{ tokens.secondary-color }};
-  --grey100: {{ tokens.grey100 }};
-  --grey200: {{ tokens.grey200 }};
-  --grey300: {{ tokens.grey300 }};
-  --grey400: {{ tokens.grey400 }};
-  --grey500: {{ tokens.grey500 }};
-  --grey600: {{ tokens.grey600 }};
-  --grey700: {{ tokens.grey700 }};
-  --grey800: {{ tokens.grey800 }};
-  --grey900: {{ tokens.grey900 }};
+  --hue: {{ tokens.hue }};
+  --primary-color: hsl(var(--hue), 50%, 60%);
+  --secondary-color: hsl(var(--hue), 50%, 30%);
+  --max-width: {{ tokens.max-width }};
+  --spacing: {{ tokens.spacing }};
+  --grey100: #f8f9fa;
+  --grey200: #e9ecef;
+  --grey300: #dee2e6;
+  --grey400: #ced4da;
+  --grey500: #adb5bd;
+  --grey600: #868e96;
+  --grey700: #495057;
+  --grey800: #343a40;
+  --grey900: #212529;
   --text-font-size: {{ tokens.text-font-size }};
 }
