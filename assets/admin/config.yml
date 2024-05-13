@@ -4,6 +4,7 @@ backend: # Required
 media_folder: "assets/img/" # Required
 public_folder: "assets/img/" # Required
 local_backend: true # Run "npx decap-server" for local backend | optional
+display_url: https://mobile-michel.github.io/13-simple-blog/
 collections: # Required
   - name: "pages" # Required. Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Required. Used in the UI
@@ -18,12 +19,36 @@ collections: # Required
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Contact"
         name: "contact"
-        file: "content/contact.md"
+        file: "content/contact.liquid"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Layout", name: "layout", widget: "string" }
           - { label: "Collections", name: "tags", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+  - label: "Blog"
+    name: "blog"
+    folder: "content/blog"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - label: "Documentation"
+    name: "doc"
+    folder: "content/doc"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
   - name: "configuration" # Required. Used in routes, e.g., /admin/collections/blog
     label: "Configuration" # Required. Used in the UI
     files:
@@ -40,15 +65,7 @@ collections: # Required
         name: "Tokens"
         file: "_data/tokens.json"
         fields:
-          - { label: Primary color, name: primary-color, widget: string }
-          - { label: Secondary color, name: secondary-color, widget: string }
-          - { label: Grey 100, name: grey100, widget: string }
-          - { label: Grey 200, name: grey200, widget: string }
-          - { label: Grey 300, name: grey300, widget: string }
-          - { label: Grey 400, name: grey400, widget: string }
-          - { label: Grey 500, name: grey500, widget: string }
-          - { label: Grey 600, name: grey600, widget: string }
-          - { label: Grey 700, name: grey700, widget: string }
-          - { label: Grey 800, name: grey800, widget: string }
-          - { label: Grey 900, name: grey900, widget: string }
+          - { label: Hue, name: hue, widget: string }
+          - { label: Max-width, name: max-width, widget: string }
+          - { label: Spacing, name: spacing, widget: string }
           - { label: Text font size, name: text-font-size, widget: string }

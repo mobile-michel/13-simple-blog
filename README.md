@@ -1,40 +1,44 @@
 # Simple template with Eleventy, Liquid & CDN css frameworks
 
-## Folder structure
+### Folder structure
 
 - templates in /content
+- blog & doc in /content/blog + /content/doc
 - layouts in /_layouts
 - includes in /_includes with /components
 - JSON files in /_data
-- SASS files in /sass
+- CSS files in /assets/css
 - images & JS in /assets with /admin (Decap CMS)
 
-## Page layout
+### Page layout
 
 - _layouts/base.liquid: head code + DecapCMS scripts
-- _layouts/default.liquid: HTML5 structure
-- _includes/navPrimary.liquid with primary navigation
-- _includes/searchSite.liquid to include in header landmark
-- _includes/navSecondary.liquid with secondary navigation
-- _includes/navFooter.liquid with footer navigation
-- _includes/copyright.liquid to include in footer landmark
-- _includes/subscribe.liquid to include in footer landmark
+- _layouts/default.liquid: HTML5 structure with ARIA landmarks
+- _includes/nav-primary.liquid with primary navigation
+- _includes/nav-secondary.liquid with secondary navigation
+- _includes/nav-footer.liquid with footer navigation
+- _includes/copyright.liquid to include in footer
 
-## Responsive navbar
+### Navigation links
 
 - tags: add primary, secondary or footer in frontmatter
+- for secondary tags, add fileslug with folder's name
 
-## Package.json scripts
-- "start": "npx @11ty/eleventy --serve",
-- "build": "eleventy"
+### Package.json scripts
+- "serve": "npx @11ty/eleventy --serve",
+- "start": "npx decap-server & npx @11ty/eleventy --serve",
+- "build": "@11ty/eleventy",
+- "build-gp": "eleventy --pathprefix '13-simple-blog'"
 
-## Dependencies
+### Dependencies
 - "@11ty/eleventy": "^2.0.1"
 - ready for [Decap CMS](https://decapcms.org/) integration.
+- ready for GitHub Pages (.github/workflows/)
 
-## eleventy.config.js
+### eleventy.config.js
 ```
 module.exports = function (eleventyConfig) {
+    eleventyConfig.addWatchTarget("./assets");
     eleventyConfig.addPassthroughCopy("./assets");
     return {
         dir: {
