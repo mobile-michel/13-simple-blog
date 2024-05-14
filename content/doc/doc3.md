@@ -4,18 +4,10 @@ description: Provide a set of pre-designed and pre-styled components that can be
 author: GitHub
 date: 2024-05-15
 ---
-[Classless CSS frameworks](https://github.com/topics/classless-css?l=html) are a popular approach to styling web pages without relying on traditional CSS classes. Instead, they utilize utility classes that can be directly applied to HTML elements.
+[Classless CSS frameworks](https://github.com/topics/classless-css?l=html) are a great option for developers looking to create simple and fast-loading web pages without sacrificing design and style. They are also ideal for small projects or prototypes where the overhead of a full CSS framework may not be necessary.
 
-These frameworks provide a set of pre-defined utility classes that can be used to style various aspects of the page, such as typography, spacing, colors, and more. By using these utility classes, developers can easily apply specific styles to elements without the need for custom CSS classes.
+It's a CSS stylesheet that styles DOM elements based on semantic HTML tags. A webpage typically consists of several HTML element types, such as headings, lists, tables, paragraphs, and form controls.
 
-Some popular classless CSS frameworks include:
+HTML offers several tags to render these elements, such as the &lt;table> tag to create a table. Each tag indicates how the end DOM element  will appear when we use the &lt;table> tag, we know that the web browser will render a table.
 
-- Tailwind CSS
-- Tachyons
-- Basscss
-
-These frameworks offer a wide range of utility classes that can be combined to create complex and responsive layouts. They promote a modular and component-based approach to styling, making it easier to maintain and update styles across the entire project.
-
-In addition to the utility classes, classless CSS frameworks often provide configuration options to customize the default styles and generate a tailored CSS file for the project.
-
-By adopting classless CSS frameworks, developers can achieve consistent and efficient styling, reduce the amount of custom CSS code, and improve the overall development workflow.
+Classless CSS frameworks help you style raw HTML pages instantly without using pre-defined classes, like class-based frameworks, or even writing a single line of CSS. Moreover, classless frameworks offer various themes and CSS variables for better customization.

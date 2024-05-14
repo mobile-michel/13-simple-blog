@@ -9,7 +9,8 @@ tags:
 ### Folder structure
 
 - templates in /content
-- blog & doc in /content/blog + /content/doc
+- documentation in /content/doc with aside navigation
+- blog in /content/blog with pagination navigation
 - layouts in /_layouts
 - includes in /_includes with /components
 - JSON files in /_data
@@ -44,16 +45,16 @@ tags:
 ### eleventy.config.js
 ```
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addWatchTarget("./assets");
-    eleventyConfig.addPassthroughCopy("./assets");
-    return {
-        dir: {
-            input: "content", // Set the source for 11ty
-            layouts: "../_layouts", // Base page layouts
-            includes: "../_includes", // All UI partials
-            data: "../_data", // JSON datasets
-            output: "_site" // This is the default
-        }
-    };
+  eleventyConfig.addWatchTarget("./assets");
+  eleventyConfig.addPassthroughCopy("./assets");
+  return {
+    dir: {
+      input: "content", // Set the source for 11ty
+      layouts: "../_layouts", // Base page layouts
+      includes: "../_includes", // All UI partials
+      data: "../_data", // JSON datasets
+      output: "_site" // This is the default
+    }
+  };
 };
 ```

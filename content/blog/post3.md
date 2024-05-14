@@ -1,10 +1,9 @@
 ---
-title: Wedding photography
+title: Wedding photo
 description: Capturing the moments and emotions of a wedding ceremony and reception.
 author: Michel Maillard
 date: 2024-05-15
 ---
-
 Wedding photography is a specialized genre of photography that focuses on capturing the moments and emotions of a wedding ceremony and reception. It requires a unique set of skills and techniques to capture the beauty, joy, and love of the couple and their loved ones.
 
 As a wedding photographer, it is important to have a good understanding of the couple's preferences and vision for their wedding day. This includes meeting with them beforehand to discuss their expectations, preferred style, and any specific shots they want to be captured.

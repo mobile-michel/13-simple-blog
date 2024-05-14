@@ -1,5 +1,4 @@
 {
-    "layout": "default",
-    "tags": "secondary",
-    "folder": "blog"
+    "layout": "paginate",
+    "tags": ["secondary", "blog"]
 }

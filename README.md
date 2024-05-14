@@ -1,11 +1,12 @@
-# Simple template with Eleventy, Liquid & CDN css frameworks
+# Simple blog with Eleventy, Liquid, classless CSS framework & DecapCMS
 
 ### Folder structure
 
 - templates in /content
-- blog & doc in /content/blog + /content/doc
+- documentation in /content/doc with aside navigation
+- blog in /content/blog with pagination navigation
 - layouts in /_layouts
-- includes in /_includes with /components
+- includes in /_includes
 - JSON files in /_data
 - CSS files in /assets/css
 - images & JS in /assets with /admin (Decap CMS)
@@ -16,13 +17,14 @@
 - _layouts/default.liquid: HTML5 structure with ARIA landmarks
 - _includes/nav-primary.liquid with primary navigation
 - _includes/nav-secondary.liquid with secondary navigation
+- _includes/nav-pagination.liquid with pagination navigation
 - _includes/nav-footer.liquid with footer navigation
 - _includes/copyright.liquid to include in footer
 
 ### Navigation links
 
 - tags: add primary, secondary or footer in frontmatter
-- for secondary tags, add fileslug with folder's name
+- for secondary tags, add folder with folder's name in frontmatter
 
 ### Package.json scripts
 - "serve": "npx @11ty/eleventy --serve",
@@ -38,16 +40,16 @@
 ### eleventy.config.js
 ```
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addWatchTarget("./assets");
-    eleventyConfig.addPassthroughCopy("./assets");
-    return {
-        dir: {
-            input: "content", // Set the source for 11ty
-            layouts: "../_layouts", // Base page layouts
-            includes: "../_includes", // All UI partials
-            data: "../_data", // JSON datasets
-            output: "_site" // This is the default
-        }
-    };
+  eleventyConfig.addWatchTarget("./assets");
+  eleventyConfig.addPassthroughCopy("./assets");
+  return {
+    dir: {
+      input: "content", // Set the source for 11ty
+      layouts: "../_layouts", // Base page layouts
+      includes: "../_includes", // All UI partials
+      data: "../_data", // JSON datasets
+      output: "_site" // This is the default
+    }
+  };
 };
 ```
