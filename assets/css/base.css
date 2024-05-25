@@ -10,14 +10,7 @@ header {
     }
 }
 
-section {
-    overflow: auto;
-}
-
 pre {
-    background-color: var(--grey300);
-    font-size: smaller;
-    padding: 20px;
-    border-left: 3px solid var(--primary-color);
-    margin: 20px 0;
+    overflow: scroll;
+    max-width: 25rem;
 }
