@@ -18,3 +18,7 @@ pre {
 main p {
     color: red;
 }
+
+special-description p {
+    color: blue;
+}
