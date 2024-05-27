@@ -13,7 +13,7 @@ layout: base
     {% endif %}
     <section aria-labelledby="{{ title | slugify }}">
         <h2 id="{{ title | slugify }}">{{ title }}</h2>
-        {% if description %}<p>{{ description }}</p>{% endif %}
+        <special-description>{% if description %}<p>{{ description }}</p>{% endif %}</special-description>
         {{ content }}
     </section>
 </main>
