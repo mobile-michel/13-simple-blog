@@ -14,3 +14,7 @@ pre {
     overflow: scroll;
     max-width: 25rem;
 }
+
+special-description {
+    color: red;
+}
